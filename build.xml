@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project name="stack_overflow">
+
+	<property  name="builder" value="Bikash Narayn Panda" />
+	<property  name="buildermail" value="oksbwn25@gmail.com" />
+	<property  name="buildersite" value="www.weargenius.in" />
+	<property  name="project-name" value="NP4J" />
+
+	<path id="jar-project-classpath">
+
+	</path>
+	<target name="clean">
+		<delete dir="bin" />
+		<mkdir dir="bin" />
+	</target>
+
+	<target name="copy-non-java-files">
+		<copy todir="bin" includeemptydirs="false">
+			<fileset dir="src" excludes="**/*.java" />
+		</copy>
+	</target>
+
+	<target name="compile-jar-classes" depends="clean,copy-non-java-files">
+		<javac srcdir="src" destdir="bin" classpathref="jar-project-classpath" />
+	</target>
+
+	<target name="clean-jar">
+		<delete dir="build" />
+		<mkdir dir="build" />
+	</target>
+
+	<target name="jar">
+		<jar basedir="bin" destfile="build/${project-name}.jar">
+			<manifest>
+				<attribute name="Built-By" value="${builder}" />
+				<attribute name="E-Mail" value="${buildermail}" />
+				<attribute name="Website" value="${buildersite}" />
+				<attribute name="Built-On" value="${build-info.current-date}" />
+				<attribute name="Built-At" value="${build-info.current-time}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="build-jar">
+		<antcall target="compile-jar-classes" />
+		<antcall target="clean-jar" />
+		<antcall target="jar" />
+	</target>
+</project>

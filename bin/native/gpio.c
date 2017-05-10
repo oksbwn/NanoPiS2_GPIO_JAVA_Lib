@@ -9,7 +9,7 @@
 #define IN   0
 #define LOW  0
 
-JNIEXPORT jint JNICALL Java_gpio_GPIOExport
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOExport
   (JNIEnv * env, jobject obj, jint pin)
 {
 	#define BUFFER_MAX 4
@@ -29,7 +29,7 @@ JNIEXPORT jint JNICALL Java_gpio_GPIOExport
     return(0);
 }
 
-JNIEXPORT jint JNICALL Java_gpio_GPIOUnexport
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOUnexport
   (JNIEnv * env, jobject obj, jint pin)
 {
     char buffer[BUFFER_MAX];
@@ -48,7 +48,7 @@ JNIEXPORT jint JNICALL Java_gpio_GPIOUnexport
     return(0);
 }
 
-JNIEXPORT jint JNICALL Java_gpio_GPIODirection
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIODirection
   (JNIEnv * env, jobject obj, jint pin, jint dir)
 {
     static const char s_directions_str[]  = "in\0out";
@@ -71,7 +71,7 @@ JNIEXPORT jint JNICALL Java_gpio_GPIODirection
     close(fd);
     return(0);
 }
-JNIEXPORT jboolean JNICALL Java_gpio_isGPIOExported
+JNIEXPORT jboolean JNICALL Java_in_weargenius_gpio_gpio_isGPIOExported
   (JNIEnv *env, jobject obj, jint pin){
 
 	#define DIRECTION_MAX 200
@@ -91,7 +91,7 @@ JNIEXPORT jboolean JNICALL Java_gpio_isGPIOExported
 	return (jboolean)1;
 	  
   }
-JNIEXPORT jint JNICALL Java_gpio_GPIORead
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIORead
   (JNIEnv *env, jobject obj, jint pin)
 {
 #define VALUE_MAX 30
@@ -116,7 +116,7 @@ JNIEXPORT jint JNICALL Java_gpio_GPIORead
     return(atoi(value_str));
 }
 
-JNIEXPORT jint JNICALL Java_gpio_GPIOWrite
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOWrite
   (JNIEnv *env, jobject obj, jint pin, jint value)
 {
     static const char s_values_str[] = "01";
