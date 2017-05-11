@@ -17,27 +17,11 @@ JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOExport
 
 /*
  * Class:     in_weargenius_gpio_gpio
- * Method:    GPIOUnexport
- * Signature: (I)I
- */
-JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOUnexport
-  (JNIEnv *, jobject, jint);
-
-/*
- * Class:     in_weargenius_gpio_gpio
  * Method:    GPIODirection
  * Signature: (II)I
  */
 JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIODirection
   (JNIEnv *, jobject, jint, jint);
-
-/*
- * Class:     in_weargenius_gpio_gpio
- * Method:    GPIORead
- * Signature: (I)I
- */
-JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIORead
-  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     in_weargenius_gpio_gpio
@@ -49,11 +33,11 @@ JNIEXPORT jboolean JNICALL Java_in_weargenius_gpio_gpio_isGPIOExported
 
 /*
  * Class:     in_weargenius_gpio_gpio
- * Method:    GPIOWrite
- * Signature: (II)I
+ * Method:    GPIOUnexport
+ * Signature: (I)I
  */
-JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOWrite
-  (JNIEnv *, jobject, jint, jint);
+JNIEXPORT jint JNICALL Java_in_weargenius_gpio_gpio_GPIOUnexport
+  (JNIEnv *, jobject, jint);
 
 #ifdef __cplusplus
 }

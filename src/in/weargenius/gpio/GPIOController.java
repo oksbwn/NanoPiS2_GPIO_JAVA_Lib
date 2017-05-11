@@ -5,7 +5,7 @@ public class GPIOController {
 	public static gpio getInstance(){
 		
 		if(gpioController==null)
-			gpioController= new gpio(0);
+			gpioController= new gpio();
 		return gpioController;
 	}
 }

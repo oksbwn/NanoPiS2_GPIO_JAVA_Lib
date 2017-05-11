@@ -50,17 +50,4 @@
 		<antcall target="clean-jar" />
 		<antcall target="jar" />
 	</target>
-	
-<<<<<<< HEAD
 </project>
-=======
-	 <!-- Generate Native haders from compiled class files -->
-	<target name="generate-native-headers">
-		<javah destdir="src/native" force="yes">
-			<class name=" "/>
-		</javah>
-	</target>
-	
-	
-</project>
->>>>>>> ae674745d3e64126bde56dbc4f92c5a7cb3352f1
