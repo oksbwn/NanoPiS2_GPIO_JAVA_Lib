@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <project name="stack_overflow">
 
+	<!-- Author details -->
 	<property  name="builder" value="Bikash Narayn Panda" />
 	<property  name="buildermail" value="oksbwn25@gmail.com" />
 	<property  name="buildersite" value="www.weargenius.in" />
 	<property  name="project-name" value="NP4J" />
 
+	<!--Class path files for JAVA build -->
 	<path id="jar-project-classpath">
 
 	</path>
@@ -20,6 +22,7 @@
 		</copy>
 	</target>
 
+	 <!-- Compile JAVA calsses -->
 	<target name="compile-jar-classes" depends="clean,copy-non-java-files">
 		<javac srcdir="src" destdir="bin" classpathref="jar-project-classpath" />
 	</target>
@@ -29,6 +32,7 @@
 		<mkdir dir="build" />
 	</target>
 
+	 <!-- Build JAR file -->
 	<target name="jar">
 		<jar basedir="bin" destfile="build/${project-name}.jar">
 			<manifest>
@@ -46,4 +50,5 @@
 		<antcall target="clean-jar" />
 		<antcall target="jar" />
 	</target>
+	
 </project>
