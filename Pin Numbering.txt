@@ -1,0 +1,25 @@
+
+Pin#	Name						NP4J		Pin#	Name						NP4J
+1		SYS_3.3V			--				2		VDD_5V					--				        
+3		I2C0_SDA/GPIOD2		98		08		4		VDD_5V					--				
+5		I2C0_SCL/GPIOD3		99		09		6		DGND					--		
+7		GPIOD8/PPM			104		07		8		UART3_TXD/GPIOD21   	117		15
+9		DGND				--				10		UART3_RXD/GPIOD17   	113		16
+11		UART4_TX/GPIOB29	61		00		12		GPIOD1/PWM0          	 97		01
+13		GPIOB30				62		02		14		DGND					--		
+15		GPIOB31				63		03		16		GPIOC14/PWM2			 78 	04	 	 
+17		SYS_3.3V			--				18		GPIOB27                  69		05
+19		SPI0_MOSI/GPIOC31	95		12		20		DGND					--		
+21		SPI0_MISO/GPIOD0	96		13		22		UART4_RX/GPIOB28         60		06
+23		SPI0_CLK/GPIOC29	93		14		24		SPI0_CS/GPIOC30          94		10
+25		DGND				--				26		GPIOB26                  58		11
+27		I2C1_SDA/GPIOD5		101		30		28		I2C1_SCL/GPIOD4			100		31
+29		GPIOC8				72		21		30		DGND					--		
+31		GPIOC7				71		22		32		GPIOC28                  92		26
+33		GPIOC13/PWM1		77		23		34		DGND					--		
+35		SPI2_MISO/GPIOC11	75		24		36		SPI2_CS/GPIOC10          74		27
+37		AliveGPIO3			163		25		38		SPI2_MOSI/GPIOC12        76		28
+39		DGND				--				40		SPI2_CLK/GPIOC9          73		29
+
+
+****NP4J Pin Mapping is in accordance with Pi4J
